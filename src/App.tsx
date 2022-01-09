@@ -12,7 +12,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <p>Hello World</p>
+        <Products
+          addToCart={() => console.log('empty')}
+          products={this.state.products}
+        />
       </div>
     )
   }
