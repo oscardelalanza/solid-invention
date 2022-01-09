@@ -13,3 +13,12 @@ export interface ProductProps {
   addToCart: () => void
   product: Product
 }
+
+export interface StyleProducts {
+  products: {}
+}
+
+export interface StyleProduct {
+  product: {}
+  img: {}
+}
