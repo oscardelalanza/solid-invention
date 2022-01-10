@@ -3,6 +3,7 @@ import Products from './components/Products'
 import Layout from './components/Layout'
 import Title from './components/Title'
 import Navbar from './components/Navbar'
+import { Product, ProductCart } from './interfaces/Products'
 
 class App extends Component {
   state = {
@@ -10,17 +11,27 @@ class App extends Component {
       { name: 'Tomato', price: 1500, img: '/products/tomato.jpg' },
       { name: 'Beans', price: 2500, img: '/products/beans.jpg' },
       { name: 'Lettuce', price: 500, img: '/products/lettuce.jpg' }
+    ],
+    cart: [
+      // { name: 'Tomato', price: 1500, img: '/products/tomato.jpg', quantity: 1 }
     ]
   }
 
+  addToCart = (product: Product) => {
+    return this.setState({
+      cart: (this.state.cart as Array<ProductCart>).concat({ ...product, quantity: 1 })
+    })
+  }
+
   render() {
+    console.log(this.state.cart)
     return (
       <div>
         <Navbar />
         <Layout>
           <Title />
           <Products
-            addToCart={() => console.log('empty')}
+            addToCart={this.addToCart}
             products={this.state.products}
           />
         </Layout>

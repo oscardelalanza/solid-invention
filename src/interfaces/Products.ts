@@ -1,4 +1,4 @@
-interface Product {
+export interface Product {
   name: string
   price: number
   img: string
@@ -6,7 +6,7 @@ interface Product {
 
 export interface ProductsProps {
   products: Array<Product>
-  addToCart: () => void
+  addToCart: (product: Product) => void
 }
 
 export interface ProductProps {
@@ -21,4 +21,8 @@ export interface StyleProducts {
 export interface StyleProduct {
   product: {}
   img: {}
+}
+
+export interface ProductCart extends Product{
+  quantity: number
 }
