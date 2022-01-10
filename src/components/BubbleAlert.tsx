@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { StyleBubbleAlert } from '../interfaces/BubbleAlert'
+import { BubbleAlertProps, StyleBubbleAlert } from '../interfaces/BubbleAlert'
 
 const styles: StyleBubbleAlert = {
   bubbleAlert: {
@@ -12,11 +12,18 @@ const styles: StyleBubbleAlert = {
   }
 }
 
-class BubbleAlert extends Component {
+class BubbleAlert extends Component <BubbleAlertProps, {}> {
+  getNumber(n: number): string {
+    if(!n) { return '' }
+
+    return n > 9 ? '9+' : n.toString()
+  }
+
   render() {
+    const { value } = this.props
     return (
       <span style={styles.bubbleAlert}>
-        5
+        {this.getNumber(value)}
       </span>
     )
   }
