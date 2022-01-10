@@ -6,7 +6,7 @@ interface ButtonProps {
 class Button extends Component<ButtonProps, {}> {
   render() {
     return (
-      <button />
+      <button {...this.props} />
     )
   }
 }
