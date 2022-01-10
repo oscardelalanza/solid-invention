@@ -10,7 +10,7 @@ export interface ProductsProps {
 }
 
 export interface ProductProps {
-  addToCart: () => void
+  addToCart: (product: Product) => void
   product: Product
 }
 
