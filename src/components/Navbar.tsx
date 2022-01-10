@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import { StyleNavbar } from '../interfaces/Navbar'
+import Cart from './Cart'
 import Logo from './Logo'
 
 const styles: StyleNavbar = {
@@ -20,7 +21,7 @@ class Navbar extends Component {
     return (
       <nav style={styles.navbar}>
         <Logo />
-        <p>Cart</p>
+        <Cart />
       </nav>
     )
   }
