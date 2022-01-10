@@ -1,10 +1,23 @@
 import { Component } from 'react'
+import { StyleLayout } from '../interfaces/Layout'
 
+const styles: StyleLayout = {
+  layout: {
+   backgroundColor: '#fff',
+   color: '#0a283e',
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  container: {
+    width: '1200px'
+  }
+}
 class Layout extends Component {
   render() {
     return (
-      <div>
-        <div>
+      <div style={styles.layout}>
+        <div style={styles.container}>
           {this.props.children}
         </div>
       </div>
