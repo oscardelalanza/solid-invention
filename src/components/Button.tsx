@@ -1,12 +1,21 @@
 import { Component } from 'react'
-interface ButtonProps {
-  onClick: () => void
+import { ButtonProps, StyleButton } from '../interfaces/Button'
+
+const styles: StyleButton = {
+  button: {
+    backgroundColor: '#0a283e',
+    color: '#fff',
+    padding: '15px 20px',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer'
+  }
 }
 
 class Button extends Component<ButtonProps, {}> {
   render() {
     return (
-      <button {...this.props} />
+      <button style={styles.button} {...this.props} />
     )
   }
 }
