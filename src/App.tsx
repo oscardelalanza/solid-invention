@@ -31,7 +31,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.cart)
     return (
       <div>
         <Navbar cart={this.state.cart} />
