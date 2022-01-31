@@ -12,9 +12,7 @@ class App extends Component {
       { name: 'Beans', price: 2500, img: '/products/beans.jpg' },
       { name: 'Lettuce', price: 500, img: '/products/lettuce.jpg' }
     ],
-    cart: [
-      // { name: 'Tomato', price: 1500, img: '/products/tomato.jpg', quantity: 1 }
-    ]
+    cart: []
   }
 
   addToCart = (product: Product) => {
@@ -36,7 +34,7 @@ class App extends Component {
     console.log(this.state.cart)
     return (
       <div>
-        <Navbar />
+        <Navbar cart={this.state.cart} />
         <Layout>
           <Title />
           <Products

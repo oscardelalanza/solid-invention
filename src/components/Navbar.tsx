@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { StyleNavbar } from '../interfaces/Navbar'
+import { StyleNavbar, NavbarProps } from '../interfaces/Navbar'
 import Cart from './Cart'
 import Logo from './Logo'
 
@@ -16,12 +16,14 @@ const styles: StyleNavbar = {
   }
 }
 
-class Navbar extends Component {
+class Navbar extends Component<NavbarProps, {}> {
   render() {
+    const { cart } = this.props
+
     return (
       <nav style={styles.navbar}>
         <Logo />
-        <Cart />
+        <Cart cart={cart} />
       </nav>
     )
   }

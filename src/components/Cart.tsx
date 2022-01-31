@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { StyleCart } from '../interfaces/Cart'
+import { CartProps, StyleCart } from '../interfaces/Cart'
 import BubbleAlert from './BubbleAlert'
 
 const styles: StyleCart = {
@@ -18,7 +18,7 @@ const styles: StyleCart = {
   }
 }
 
-class Cart extends Component {
+class Cart extends Component<CartProps, {}> {
   render() {
     return(
       <div>
