@@ -2,7 +2,8 @@ import { ProductCart } from './Products'
 
 export interface NavbarProps {
   cart: Array<ProductCart>
-  visibleCart: () => void
+  visibleCart: Boolean
+  showCart: () => void
 }
 
 export interface StyleNavbar {
