@@ -32,7 +32,9 @@ class App extends Component {
   }
 
   handleVisibleCart = (): void => {
-    this.setState({ visibleCart: !this.state.visibleCart })
+    if (!!this.state.cart.length) {
+      this.setState({ visibleCart: !this.state.visibleCart })
+    }
   }
 
   render() {
