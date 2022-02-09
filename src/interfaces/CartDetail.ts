@@ -6,4 +6,6 @@ export interface CartDetailProps {
 
 export interface StyleCartDetail {
   cartDetail: {}
+  ul: {}
+  product: {}
 }
