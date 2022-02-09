@@ -31,14 +31,14 @@ class App extends Component {
     })
   }
 
-  handleVisibleCart = () => {
+  handleVisibleCart = (): void => {
     this.setState({ cartVisible: !this.state.cartVisible })
   }
 
   render() {
     return (
       <div>
-        <Navbar cart={this.state.cart} />
+        <Navbar cart={this.state.cart} visibleCart={this.handleVisibleCart} />
         <Layout>
           <Title />
           <Products
