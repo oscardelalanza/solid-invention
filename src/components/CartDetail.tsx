@@ -29,7 +29,7 @@ const styles: StyleCartDetail = {
 class CartDetail extends Component<CartDetailProps, {}> {
   render() {
     const { cart } = this.props
-    console.log(cart)
+
     return (
       <div style={styles.cartDetail}>
         <ul style={styles.ul}>
