@@ -18,12 +18,12 @@ const styles: StyleNavbar = {
 
 class Navbar extends Component<NavbarProps, {}> {
   render() {
-    const { cart } = this.props
+    const { cart, visibleCart, showCart } = this.props
 
     return (
       <nav style={styles.navbar}>
         <Logo />
-        <Cart cart={cart} />
+        <Cart cart={cart} visibleCart={visibleCart} showCart={showCart} />
       </nav>
     )
   }
