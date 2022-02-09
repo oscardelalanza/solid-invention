@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import { CartProps, StyleCart } from '../interfaces/Cart'
 import BubbleAlert from './BubbleAlert'
+import CartDetail from './CartDetail'
 
 const styles: StyleCart = {
   cart: {
@@ -33,6 +34,7 @@ class Cart extends Component<CartProps, {}> {
         <button style={styles.cart}>
           Cart
         </button>
+        <CartDetail cart={cart} />
       </div>
     )
   }
